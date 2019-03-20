@@ -1,0 +1,88 @@
+/* seo-text */
+.seo-text {
+  margin: 45px 72px 0 71px;
+  border-bottom: 1px solid #d7d5d6;
+  h2 {
+    color: $main;
+    font-size: 36px;
+    line-height: 46px;
+    padding: 0 80px 40px 0;
+    margin: 0;
+    font-family: $font-title;
+  }
+  &__description {
+    position: relative;
+    &-cover {
+      overflow: hidden;
+      max-height: 110px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      color: $primary;
+      font-family: $font;
+/*      height: 245px;
+      overflow: hidden;*/
+    }
+    &.show-all {
+      p {
+        height: auto;
+      }
+      .seo-text__all-text {
+        &:after {
+          background: url('../pic/small-arrow.png') no-repeat center 0;
+          -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+        &:hover {
+          &:after {
+            background: url('../pic/small-arrow.png') no-repeat center -9px;
+          }
+        }
+      }
+    }
+  }
+  &__shadow {
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__all-text {
+    position: relative;
+    z-index: 2;
+    color: $secondary !important;
+    font-size: 16px !important;
+    line-height: 16px !important;
+    font-family: $font;
+    font-weight: normal !important;
+    float: none !important;
+    border-bottom: 1px dotted rgba(93, 40, 66, 0.5);
+    margin: 45px 0 40px 140px;
+    cursor: pointer;
+    display: table;
+    transition: all 0.3s ease;
+    &:after {
+      content: '';
+      background: url('../pic/small-arrow.png') no-repeat center 0;
+      height: 5px;
+      display: flex;
+      position: absolute;
+      width: 100%;
+      margin-top: 8px;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      border-bottom: 1px dotted transparent;
+      &:after {
+        background: url('../pic/small-arrow.png') no-repeat center -9px;
+      }
+    }
+  }
+}

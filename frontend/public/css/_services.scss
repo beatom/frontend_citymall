@@ -1,0 +1,98 @@
+.company-services {
+    &__title {
+      display: flex;
+      color: #572642;
+      font-size: 24px;
+      line-height: 31px;
+      font-family: $font-title;
+      align-items: center;
+      i {
+        display: flex;
+        color: $main;
+        font-size: 53px;
+        padding-right: 20px;
+      }
+    }
+    &__description {
+      font-size: 18px;
+      line-height: 27px;
+      color: $primary;
+      font-family: $font-light;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  .panel-group {
+    margin-bottom: 90px;
+    .panel {
+      border-radius: 0;
+      background-color: $default;
+      border: none;
+      box-shadow: none;
+      transition: all 0.3s ease;
+      margin-bottom: 15px;
+      &:hover {
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.11);
+        cursor: pointer;
+        .panel-heading {
+          .panel-title {
+            div {
+              top: 5px;
+            }
+          }
+        }
+      }
+      .panel-heading {
+        background-color: $default;
+        padding: 0;
+        .panel-title {
+          padding: 20px 30px;
+          font-size: 20px;
+          line-height: 31px;
+          color: #572642;
+          font-family: $font-bold;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+          }
+          div {
+            width: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            top: 0;
+          }
+          .show-description {
+            background: url('../pic/faq-icons.png') no-repeat 0 -23px;
+            height: 9px;
+          }
+        }
+      }
+      &.opened {
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.11);
+        .panel-heading {
+          .panel-title {
+            .show-description {
+              top: 0;
+              background: url('../pic/faq-icons.png') no-repeat 0 0;
+              height: 15px;
+            }
+          }
+        }
+      }
+      .panel-body {
+        border-top: none !important;
+        padding: 0 0 20px;
+        ul {
+          li {
+            padding:0 30px;
+            font-size: 16px;
+            line-height: 40px;
+            font-family: $font-light;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
